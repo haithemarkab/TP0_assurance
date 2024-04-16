@@ -19,14 +19,14 @@ class StackTest {
 
     //**************************** tester la pile *************************************
     @Test
-    void pushShouldAddElementToTheTopOfTheStack() {
+    void push_must_add_element_to_theTop_in_stack() {
 
         stack.push(1919);
         assertEquals(1,stack.size());
         assertEquals(1919,stack.peek());
     }
     @Test
-    void pushShouldExpandArrayIfStackIsFull(){
+    void push_must_array_if_stack_Full(){
 
         for(int i=0;i<5;i++) {
             stack.push(i*4);
@@ -38,7 +38,7 @@ class StackTest {
         assertEquals(1616,stack.peek());
     }
     @Test
-    void popShouldReturnTheElementAtTheTopIfIsNotEmpty() {
+    void pop_must_return_the_element_the_top_is_not_empty() {
 
         stack.push(70);
         assertEquals(70,stack.pop());
@@ -47,38 +47,38 @@ class StackTest {
 
     }
     @Test
-    void popShouldRaiseExceptionIfStackIsEmpty(){
+    void pop_must_raise_exception_if_stack_is_empty(){
 
         assertThrows(IllegalStateException.class,() -> stack.pop());
 
     }
     @Test
-    void peekShouldReturnElementAtTheTopIfStackIsNotEpmty() {
+    void peek_must_return_element_the_top_if_stack_est_not_epmty() {
 
         stack.push(190);
         assertEquals(190,stack.peek());
     }
     @Test
-    void peekShouldRaiseExceptionIfStackIsEmpty(){
+    void peek_must_raise_exception_if_stack_is_empty(){
 
         assertThrows(IllegalStateException.class,() ->stack.peek());
 
     }
     @Test
-    void isEmptyShouldRrturnTrueIfItIsEmpty() {
+    void is_empty_must_rrturn_true_if_is_empty() {
 
         assertTrue(stack.isEmpty());
 
     }
     @Test
-    void isEmptyShouldReturnFalseIfItIsNotEmpty() {
+    void is_empty_must_return_false_if_is_not_empty() {
 
         stack.push(100);
         assertFalse(stack.isEmpty());
     }
 
     @Test
-    void sizeShouldReturnSizeOfStack() {
+    void size_must_return_size_of_Stack() {
 
         stack.push(32);
         assertEquals(1,stack.size());
